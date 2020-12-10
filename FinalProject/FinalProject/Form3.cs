@@ -60,7 +60,7 @@ namespace FinalProject
                 using (StreamWriter outputFile = File.AppendText(studentsFilePath))
                 {
                     // Create the file
-                    outputFile.WriteLine(studentID.Text + ", " + sectionNumber.Text + ", " + lastName.Text + ", " + firstName.Text);
+                    outputFile.Write(studentID.Text + ", " + sectionNumber.Text + ", " + lastName.Text + ", " + firstName.Text);
 
                 }
 

@@ -292,6 +292,11 @@ namespace FinalProject
             List<string> listOfCategoryNames = new List<string>();
             string categoryFilePath = System.IO.Path.Combine(currentDirectory, "Data", "Categories_" + nameOfSelectedCourse + ".txt");
             // Get the list of categories for the selected course
+            if (!File.Exists(categoryFilePath))
+            {
+                MessageBox.Show("Category file does not exist. Please add a category");
+                return;
+            }
             using (StreamReader reader = new StreamReader(categoryFilePath))
             {
                 string[] names = reader.ReadLine().Split(',');
@@ -340,6 +345,12 @@ namespace FinalProject
                 reader.ReadLine();
                 string[] numbers = reader.ReadLine().Split(',');
                 string numForCategory = numbers[categoryNameComboBox.SelectedIndex];
+                int n;
+                if (!int.TryParse(numForCategory, out n))
+                {
+                    MessageBox.Show("Improper selection of combobox");
+                    return;
+                }
                 for (int i = 1; i < int.Parse(numForCategory) + 1; i++)
                 {
                     listOfNumbers.Add(i.ToString());
@@ -384,7 +395,7 @@ namespace FinalProject
                 string toAdd = toTest + ", " + studentGradeBox.Text;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (!toTest.Equals(line.Substring(0, 4)))
+                    if (!toTest.Equals(line.Substring(0, 1)))
                     {
                         toWrite.Add(line);
                     }
