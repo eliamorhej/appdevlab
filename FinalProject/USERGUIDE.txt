@@ -1,0 +1,37 @@
+USER GUIDE
+
+APP DEV PROJECT
+
+THOMAS MEYER, ELIA MORHEJ, JEEVA PIRITIVIRAJAH
+
+2020-12-10
+
+The app has multiple different functions such as the ability to
+create a course (or to, alternatively, enter one if it is already created)
+or even remove one. After selecting the course, we get the ability to
+add or modify a student's information, as well as add or modify a category.
+We can also view the student's grades as well as add some
+and calculate the final report.
+
+There are 3 main pages to the form.
+One of them is the page where you select the course.
+The second one is where you add/modify students and categories,
+as well as calculate the final report for the selected course.
+The third page is the one where you are able to see a selected
+student's grades as well as modify them and add new ones.
+There are also two forms which appear whenever you create a new student
+or modify/create a new category. Everything is accessible by buttons
+and some things have to be entered with textboxes while others can just
+be done with comboboxes.
+
+The files with all of the information that are created can be viewed by going
+into the FinalProject folder. After that, we navigate to the binfolder,
+followed by the Debug folder. The files are going to be either in the Final Report
+folder, for the final reports, or the Data folder, for the other files
+such as the personal student files, the category files, the students per class files
+and the Courses file.
+
+There are back buttons in order to be able to navigate back to the main menu and there is
+a possibility to close the newly appeared forms if you change your mind about creating
+a new student or a new category.
+
