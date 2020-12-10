@@ -105,11 +105,15 @@ namespace FinalProject
                         MessageBox.Show("This category already exists! Modifying!");
                         test = true;
                     }
-                    if (str.Trim().Substring(0, 1).ToLower().Equals(categories.Text.Substring(0, 1).ToLower()))
+                    else
                     {
-                        MessageBox.Show("Error: Two categories cannot have the same starting letter");
-                        return;
+                        if (str.Trim().Substring(0, 1).ToLower().Equals(categories.Text.Substring(0, 1).ToLower()))
+                        {
+                            MessageBox.Show("Error: Two categories cannot have the same starting letter");
+                            return;
+                        }
                     }
+                    
                     // Also check if the same starting letter exists already.
 
                     // Adds to the string which is going to be used to put back into the text file
